@@ -1,5 +1,5 @@
 #**************************************Unit Classes***************************#
-#basic character class
+#character base class
 class character:
   name_ = "Unknown"
   race_ = "Unknown"
