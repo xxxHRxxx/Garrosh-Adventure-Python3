@@ -1,17 +1,19 @@
 from character import warrior, mage, priest, NPC
 from enemy import goblin, murloc
-
+from team import team
 #**************************************Place character into World*************#
 warrior_gar = warrior("Orc", "Garrosh")
-warrior_gar.check_status()
 mage_jen = mage("human", "Jaina")
-mage_jen.check_status()
 priest_and = priest("human", "Anduin")
-priest_and.check_status()
 npc_dummy = NPC("orc", "dummy", 1)
-npc_dummy.check_status()
+my_team = team([warrior_gar, mage_jen, priest_and, npc_dummy], 1)
+my_team.check_team_status()
+
+
 enemy1 = goblin(10)
-enemy1.check_status()
-enemy2 = murloc(15)
-enemy2.check_status()
+enemy2 = goblin(10)
+enemy3 = murloc(15)
+enemy_team = team([enemy1, enemy2, enemy3], 0)
+enemy_team.check_team_status()
+
 #**************************************Eof************************************#
