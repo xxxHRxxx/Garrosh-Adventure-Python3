@@ -1,12 +1,11 @@
-from character import warrior, mage, priest, NPC
+from character import warrior, mage, priest
 from enemy import goblin, murloc
 from team import team
 #**************************************Place character into World*************#
 warrior_gar = warrior("Orc", "Garrosh")
 mage_jen = mage("human", "Jaina")
 priest_and = priest("human", "Anduin")
-npc_dummy = NPC("orc", "dummy", 1)
-my_team = team([warrior_gar, mage_jen, priest_and, npc_dummy], 1)
+my_team = team([warrior_gar, mage_jen, priest_and], 1)
 my_team.check_team_status()
 
 
