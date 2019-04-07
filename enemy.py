@@ -2,14 +2,18 @@
 #enemy base class
 class enemy():
   enemy_type_ = "unknown"
-  evel_ = 1
+  level_ = 1
+  health_ = 0
   def __init__(self, enemy_type, level):
     self.enemy_type_ = enemy_type
     self.level_ = level
+    self.health_ = self.level_*100
+
 
   def check_status(self):
     print("[***enemy***]")
     print("enemy:  level {} {}".format(self.level_, self.enemy_type_))
+    print("health: " + chr(9608)*(self.health_//(self.level_*5)), self.health_)
 
 #enemy goblin
 class goblin(enemy):
