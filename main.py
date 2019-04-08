@@ -8,9 +8,9 @@ mage_jen = mage("human", "Jaina")
 priest_and = priest("human", "Anduin")
 my_team = team([warrior_gar, mage_jen, priest_and], 1)
 
-enemy1 = goblin(10)
-enemy2 = goblin(10)
-enemy3 = murloc(15)
+enemy1 = goblin(1)
+enemy2 = goblin(1)
+enemy3 = murloc(1)
 enemy_team = team([enemy1, enemy2, enemy3], 0)
 
 first_combat = combat(my_team, enemy_team)

@@ -1,19 +1,25 @@
 #**************************************Unit Classes***************************#
+import math
+from game_util import health_bar_block_num
+
 #character base class
 class character:
   name_ = "Unknown"
   race_ = "Unknown"
   class_ = "Unknown"
   level_ = 1
-  health_ = 0
+  full_health_ = 0
+  curr_health_ = 0
   attack_ = 0
   defence_ = 0
+
   #create new character
   def __init__(self, new_race, new_class, new_name):
     self.race_ = new_race
     self.class_ = new_class
     self.name_ = new_name
-    self.health_ = self.level_*100
+    self.full_health_ = self.level_*100
+    self.curr_health_ = self.full_health_
     self.exp_ = 0;
 
   #check character info
@@ -21,7 +27,9 @@ class character:
     print("[***Player character***]")
     print("character:  {}, level {} {} {}".format(self.name_, self.level_, self.race_,
           self.class_))
-    print("health: " + chr(9608)*(self.health_//(self.level_*5)), self.health_)
+    print("health: " + chr(9608)*(health_bar_block_num(self.curr_health_, self.full_health_))
+          + "_"*(20 - health_bar_block_num(self.curr_health_, self.full_health_)) + 
+          "{}/{}".format(self.curr_health_, self.full_health_))
     print("exp:    ", self.exp_)
 
   def get_attack_info(self):
