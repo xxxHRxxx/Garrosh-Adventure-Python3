@@ -1,4 +1,6 @@
 #**************************************team class*****************************#
+import numpy as np 
+
 class team():
   team_member_ = []
   is_user_team_ = 0
@@ -15,6 +17,14 @@ class team():
           "Team info-------------------------------")
 
   def get_team_attack_info(self):
-    for individual in self.team_member_:
-      print(individual.get_attack_info())
+  	res = np.array([])
+  	for individual in self.team_member_:
+  		res = np.append(res, [individual.get_attack_info()])
+  	return res
+
+  def get_team_health_info(self):
+  	res = np.array([])
+  	for individual in self.team_member_:
+  		res = np.append(res, [individual.get_current_health()])
+  	return res
 #**********************************end team class*****************************#

@@ -32,6 +32,11 @@ class character:
           "{}/{}".format(self.curr_health_, self.full_health_))
     print("exp:    ", self.exp_)
 
+  #get current health
+  def get_current_health(self):
+    return self.curr_health_
+
+  #get attack info
   def get_attack_info(self):
     return self.attack_
 

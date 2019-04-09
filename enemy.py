@@ -22,6 +22,10 @@ class enemy():
           + "_"*(20 - health_bar_block_num(self.curr_health_, self.full_health_)) + 
           "{}/{}".format(self.curr_health_, self.full_health_))
 
+	#get current health
+  def get_current_health(self):
+  	return self.curr_health_
+  	
   def get_attack_info(self):
   	return self.attack_
 
