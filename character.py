@@ -40,6 +40,12 @@ class character:
   def get_attack_info(self):
     return self.attack_
 
+  def get_name(self):
+    return self.name_
+
+  def set_new_health(self, new_health):
+    self.curr_health_ = new_health
+
 #warrior character
 class warrior(character):
   class_name_ = "warrior"

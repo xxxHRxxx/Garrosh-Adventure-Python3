@@ -25,9 +25,15 @@ class enemy():
 	#get current health
   def get_current_health(self):
   	return self.curr_health_
-  	
+
   def get_attack_info(self):
   	return self.attack_
+
+  def get_name(self):
+  	return self.enemy_type_
+
+  def set_new_health(self, new_health):
+  	self.curr_health_ = new_health
 
 #enemy goblin
 class goblin(enemy):
