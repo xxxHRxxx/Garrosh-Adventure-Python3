@@ -32,9 +32,9 @@ class team():
   	return res
 
   def team_still_survive(self):
-  	res = True
+  	res = False
   	for individual in self.team_member_:
-  		res = (res and (individual.get_current_health() > 0))
+  		res = (res or (individual.get_current_health() > 0))
   	return res
 
   def get_team_survive_list(self):

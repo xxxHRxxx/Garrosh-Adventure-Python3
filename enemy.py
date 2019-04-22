@@ -35,6 +35,9 @@ class enemy():
   def set_new_health(self, new_health):
   	self.curr_health_ = new_health
 
+  def take_damage(self, damage):
+  	self.curr_health_ = (self.curr_health_ - damage) if (self.curr_health_ - damage) >= 0 else 0
+
 #enemy goblin
 class goblin(enemy):
   goblin_enemy_type_ = "goblin"

@@ -14,7 +14,6 @@ enemy3 = murloc(1)
 enemy_team = team([enemy1, enemy2, enemy3], 0)
 
 first_combat = combat(my_team, enemy_team)
-first_combat.check_combat_info()
 
 first_combat.combat_start()
 #**************************************Eof************************************#
