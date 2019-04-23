@@ -37,7 +37,7 @@ class combat:
 			print("who will {} attack?".format(individual.get_name()))
 			self.get_enemy_list()
 			target = (int)(input("Enter index of enemy: ")) - 1
-			self.team2_.get_team_member()[target].take_damage(1000)
+			self.team2_.get_survive_team_member()[target].take_damage(10)
 			if (not self.team2_.team_still_survive()):
 				print ("Enemy team is defeated!");
 				return

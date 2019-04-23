@@ -43,4 +43,6 @@ class team():
   		res = np.append(res, [individual.get_current_health() != 0])
   	return res
 
+  def get_survive_team_member(self):
+  	return [x for x in self.team_member_ if x.get_current_health() != 0]
 #**********************************end team class*****************************#
