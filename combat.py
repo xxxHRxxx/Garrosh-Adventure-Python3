@@ -31,16 +31,25 @@ class combat:
 				names.append(self.team2_.get_team_member()[i].get_name())
 		print (list(zip([x + 1 for x in range((int)(np.sum(self.team2_.get_team_survive_list())))], names)))
 
-  #private function that we do not want to use by client
+  #private function that we do not want it use by client
+  #user attack enemy
 	def __user_action(self):
-		for individual in self.team1_.get_team_member():
+		for individual in self.team1_.get_survive_team_member():
 			print("who will {} attack?".format(individual.get_name()))
 			self.get_enemy_list()
 			target = (int)(input("Enter index of enemy: ")) - 1
+			while target < 0 or target >= len(self.team2_.get_survive_team_member()):
+				print("Come on! Choose a valid enemy!")
+				target = (int)(input("Enter index of enemy: ")) - 1
 			self.team2_.get_survive_team_member()[target].take_damage(10)
 			if (not self.team2_.team_still_survive()):
 				print ("Enemy team is defeated!");
 				return
+
+	#private function that we do not want it to use by client
+	#enemy attack user
+	#def __enemy_action(self):
+	#	for indivi
 
 
 
